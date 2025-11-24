@@ -12,7 +12,7 @@ const Header = () => {
           
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
-              Services
+              Builds in Progress
             </a>
             <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
               About
