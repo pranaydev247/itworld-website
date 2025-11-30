@@ -1,17 +1,11 @@
 import nexgenLogo from "@/assets/nexgen-logo.png";
-
 const Footer = () => {
-  return (
-    <footer className="bg-background border-t border-border">
+  return <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="mb-4">
-              <img 
-                src={nexgenLogo} 
-                alt="NexGen Tech Labs" 
-                className="h-16 w-auto"
-              />
+              <img src={nexgenLogo} alt="NexGen Tech Labs" className="h-16 w-auto" />
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               Leading the future of AI technology with innovative solutions that transform businesses and drive digital
@@ -29,7 +23,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#Builds in Progress" className="text-muted-foreground hover:text-primary transition-colors">
-                  Services
+                  Our Products 
                 </a>
               </li>
               <li>
@@ -66,8 +60,6 @@ const Footer = () => {
           <p className="text-muted-foreground">© 2024 NexGen Tech Labs. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
