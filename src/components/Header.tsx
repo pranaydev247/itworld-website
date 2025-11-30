@@ -19,9 +19,6 @@ const Header = () => {
           </nav>
           
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="hidden sm:flex">
-              Get Started
-            </Button>
             <Button variant="hero" size="sm">
               Contact Us
             </Button>
