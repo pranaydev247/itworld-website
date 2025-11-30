@@ -1,12 +1,17 @@
+import nexgenLogo from "@/assets/nexgen-logo.png";
+
 const Footer = () => {
   return (
     <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg"></div>
-              <span className="text-xl font-bold text-foreground">NexGen Tech Labs</span>
+            <div className="mb-4">
+              <img 
+                src={nexgenLogo} 
+                alt="NexGen Tech Labs" 
+                className="h-16 w-auto"
+              />
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               Leading the future of AI technology with innovative solutions that transform businesses and drive digital
