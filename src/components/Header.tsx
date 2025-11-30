@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import nexgenLogo from "@/assets/nexgen-logo.png";
 const Header = () => {
   return <header className="border-b border-border bg-background/80 backdrop-blur-md sticky top-0 z-50">
@@ -19,9 +20,11 @@ const Header = () => {
           </nav>
           
           <div className="flex items-center space-x-4">
-            <Button variant="hero" size="sm">
-              Contact Us
-            </Button>
+            <Link to="/contact">
+              <Button variant="hero" size="sm">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
