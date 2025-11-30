@@ -1,14 +1,18 @@
 import { Button } from "@/components/ui/button";
+import nexgenLogo from "@/assets/nexgen-logo.png";
 
 const Header = () => {
   return (
     <header className="border-b border-border bg-background/80 backdrop-blur-md sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg animate-glow"></div>
-            <span className="text-xl font-bold text-foreground">NexGen Tech Labs</span>
-          </div>
+          <a href="/" className="flex items-center">
+            <img 
+              src={nexgenLogo} 
+              alt="NexGen Tech Labs" 
+              className="h-12 w-auto hover:opacity-80 transition-opacity"
+            />
+          </a>
           
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
