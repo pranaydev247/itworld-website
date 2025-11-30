@@ -21,10 +21,7 @@ const Header = () => {
             <a href="/about" className="text-muted-foreground hover:text-primary transition-colors">
               About
             </a>
-            <a href="/team-careers" className="text-muted-foreground hover:text-primary transition-colors">
-              Team & Careers
-            </a>
-            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
               Contact
             </a>
           </nav>
