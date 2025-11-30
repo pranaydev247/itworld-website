@@ -17,18 +17,18 @@ const Footer = () => {
             <h4 className="text-foreground font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/about" className="text-muted-foreground hover:text-primary transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="#Builds in Progress" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/#services" className="text-muted-foreground hover:text-primary transition-colors">
                   Our Products 
                 </a>
               </li>
               <li>
-                <a href="#careers" className="text-muted-foreground hover:text-primary transition-colors">
-                  Team And Careers    
+                <a href="/team-careers" className="text-muted-foreground hover:text-primary transition-colors">
+                  Team & Careers    
                 </a>
               </li>
             </ul>
@@ -38,13 +38,9 @@ const Footer = () => {
             <h4 className="text-foreground font-semibold mb-4">Contact</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Get in Touch
                 </a>
-              </li>
-              
-              <li>
-                
               </li>
             </ul>
           </div>
