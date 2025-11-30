@@ -23,7 +23,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/#services" className="text-muted-foreground hover:text-primary transition-colors">
-                  Our Products 
+                  Our TechStack 
                 </a>
               </li>
               <li>
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-foreground font-semibold mb-4">Tech Stack </h4>
+            <h4 className="text-foreground font-semibold mb-4">Contact</h4>
             <ul className="space-y-2">
               <li>
                 <a href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
