@@ -81,10 +81,10 @@ export default {
 			keyframes: {
 				'glow': {
 					'0%, 100%': { 
-						boxShadow: '0 0 20px hsl(235 100% 60% / 0.1)' 
+						boxShadow: '0 0 20px hsl(207 78% 35% / 0.1)' 
 					},
 					'50%': { 
-						boxShadow: '0 0 40px hsl(235 100% 60% / 0.3)' 
+						boxShadow: '0 0 40px hsl(207 78% 35% / 0.3)' 
 					}
 				},
 				'float': {
