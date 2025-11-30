@@ -1,6 +1,7 @@
 import nexgenLogo from "@/assets/nexgen-logo.png";
 const Footer = () => {
-  return <footer className="bg-background border-t border-border">
+  return (
+    <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
@@ -23,12 +24,12 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/#techstack" className="text-muted-foreground hover:text-primary transition-colors">
-                  Our TechStack 
+                  Our TechStack
                 </a>
               </li>
               <li>
                 <a href="/team-careers" className="text-muted-foreground hover:text-primary transition-colors">
-                  Team & Careers    
+                  Team & Careers
                 </a>
               </li>
             </ul>
@@ -47,9 +48,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border pt-8 mt-8 text-center">
-          <p className="text-muted-foreground">© 2024 NexGen Tech Labs. All rights reserved.</p>
+          <p className="text-muted-foreground">© 2025 NexGen Tech Labs. All rights reserved.</p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
 export default Footer;
