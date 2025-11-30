@@ -22,7 +22,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/#services" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/#techstack" className="text-muted-foreground hover:text-primary transition-colors">
                   Our TechStack 
                 </a>
               </li>
