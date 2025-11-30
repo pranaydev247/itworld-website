@@ -16,7 +16,7 @@ const Services = () => {
         "A Laser Focused and Gamified app for Kids to incorporate Reinforcement learning for UK primary shool kids preparing for 11+ and SATS.",
     },
     {
-      icon: zap,
+      icon: Zap,
       title: "SareeStage",
       description: "Solving an extremely important problem for Indian Women - A Saree Virtual Try on.",
     },
