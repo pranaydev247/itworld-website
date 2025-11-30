@@ -10,7 +10,7 @@ const Header = () => {
             <img 
               src={nexgenLogo} 
               alt="NexGen Tech Labs" 
-              className="h-12 w-auto hover:opacity-80 transition-opacity"
+              className="h-16 w-auto hover:opacity-90 transition-opacity"
             />
           </a>
           
