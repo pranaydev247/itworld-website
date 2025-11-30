@@ -38,46 +38,6 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Contact Info Section */}
-        <section className="py-16 bg-muted/30">
-          <div className="container px-4 md:px-6">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Other Ways to Connect</h2>
-              
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl">
-                    📧
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Email</h3>
-                  <p className="text-muted-foreground">
-                    hello@nexgentech.labs
-                  </p>
-                </div>
-
-                <div>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl">
-                    🌍
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Global Team</h3>
-                  <p className="text-muted-foreground">
-                    Working across time zones
-                  </p>
-                </div>
-
-                <div>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl">
-                    ⚡
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Quick Response</h3>
-                  <p className="text-muted-foreground">
-                    We typically reply within 24 hours
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
