@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-center mb-6">
             <Sparkles className="w-6 h-6 text-primary mr-2 animate-float" />
-            <span className="text-primary font-medium">Next Generation AI Solutions</span>
+            
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
