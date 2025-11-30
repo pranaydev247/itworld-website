@@ -31,7 +31,12 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="lg" className="group">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="group"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Look What We are Building Now     
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
