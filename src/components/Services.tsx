@@ -1,24 +1,26 @@
 import { Card } from "@/components/ui/card";
-import { Brain, Cpu, Database, Zap } from "lucide-react";
+import infrajetLogo from "@/assets/brand-infrajet.png";
+import prepstreakLogo from "@/assets/brand-prepstreak.png";
+import sareestageLogo from "@/assets/brand-sareestage.png";
 
 const Services = () => {
   const services = [
     {
-      icon: Brain,
+      image: infrajetLogo,
       title: "InfraJet",
       description:
         "Custom AI IaC Code Generationn with clever guardrails for blazing speed infra deployments in Enterprises.",
       url: "https://infrajet.dev"
     },
     {
-      icon: Brain,
+      image: prepstreakLogo,
       title: "PrepStreak",
       description:
         "A Laser Focused and Gamified app for Kids to incorporate Reinforcement learning for UK primary shool kids preparing for 11+ and SATS.",
       url: "https://prepstreak.co.uk"
     },
     {
-      icon: Zap,
+      image: sareestageLogo,
       title: "SareeStage",
       description: "Solving an extremely important problem for Indian Women - A Saree Virtual Try on.",
       url: "https://sareestage.com"
@@ -35,18 +37,22 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-5xl mx-auto">
           {services.map((service, index) => (
             <a
               key={index}
               href={service.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block"
+              className="block w-full"
             >
               <Card className="p-6 bg-gradient-card border-0 shadow-card hover:shadow-glow transition-all duration-300 group cursor-pointer h-full">
-                <div className="mb-4">
-                  <service.icon className="w-12 h-12 text-primary group-hover:scale-110 transition-transform duration-300" />
+                <div className="mb-4 flex items-center justify-center h-20">
+                  <img 
+                    src={service.image} 
+                    alt={`${service.title} logo`}
+                    className="max-h-full w-auto object-contain group-hover:scale-110 transition-transform duration-300" 
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">{service.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{service.description}</p>
