@@ -28,7 +28,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#careers" className="text-muted-foreground hover:text-primary transition-colors">
-                  Careers
+                  Team And Careers    
                 </a>
               </li>
             </ul>
@@ -42,15 +42,9 @@ const Footer = () => {
                   Get in Touch
                 </a>
               </li>
+              
               <li>
-                <a href="#support" className="text-muted-foreground hover:text-primary transition-colors">
-                  Support
-                </a>
-              </li>
-              <li>
-                <a href="#partners" className="text-muted-foreground hover:text-primary transition-colors">
-                  Partners
-                </a>
+                
               </li>
             </ul>
           </div>
