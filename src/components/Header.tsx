@@ -1,12 +1,20 @@
-import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
 import nexgenLogo from "@/assets/nexgen-logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { label: "Services", href: "/#services" },
@@ -23,73 +31,85 @@ const Header = () => {
   };
 
   return (
-    <header className="border-b border-border bg-background/80 backdrop-blur-md sticky top-0 z-50">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-background/95 backdrop-blur-md border-b border-border"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center">
             <img
               src={nexgenLogo}
               alt="NexGen Tech Labs"
-              className="h-12 w-auto hover:opacity-90 transition-opacity"
+              className="h-10 w-auto hover:opacity-80 transition-opacity"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center gap-12">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className={`transition-colors ${
+                className={`text-sm font-medium transition-colors relative group ${
                   isActive(item.href)
-                    ? "text-primary font-medium"
-                    : "text-muted-foreground hover:text-primary"
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <Link to="/contact">
-              <Button variant="hero" size="sm">
-                Get in Touch
-              </Button>
+          <div className="hidden md:flex items-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors group"
+            >
+              Get in Touch
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-foreground"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-foreground" />
+              <X className="h-6 w-6" />
             ) : (
-              <Menu className="h-6 w-6 text-foreground" />
+              <Menu className="h-6 w-6" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border mt-4">
-            <div className="flex flex-col space-y-4">
+          <nav className="md:hidden py-6 border-t border-border animate-fade-in">
+            <div className="flex flex-col gap-6">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="hero" size="sm" className="w-full">
-                  Get in Touch
-                </Button>
+              <Link
+                to="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="inline-flex items-center gap-2 text-lg font-medium text-primary"
+              >
+                Get in Touch
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </nav>

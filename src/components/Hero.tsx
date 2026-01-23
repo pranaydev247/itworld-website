@@ -1,78 +1,47 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div
-        className="absolute inset-0 bg-gradient-hero"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: 0.1,
-        }}
-      />
+    <section className="min-h-screen flex items-center justify-center pt-20 pb-32">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="max-w-5xl">
+          {/* Eyebrow */}
+          <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-8 animate-fade-in">
+            Forward Deployed Engineering
+          </p>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center mb-6">
-            <Sparkles className="w-6 h-6 text-primary mr-2 animate-float" />
-            <span className="text-sm font-medium text-primary uppercase tracking-wider">
-              Forward Deployed Engineering
-            </span>
-          </div>
-
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
+          {/* Main Headline */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-foreground leading-[1.1] mb-8 animate-slide-up">
             AI & Engineering
-            <span className="block bg-gradient-primary bg-clip-text text-transparent animate-glow">
-              Consultancy
-            </span>
+            <br />
+            <span className="text-primary">Consultancy</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed">
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
             We don't just advise. We embed, architect, and deploy production-grade AI solutions within your secure environment.
           </p>
 
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Bridging the "last mile" gap where 95% of AI pilot programs fail.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-              variant="hero"
-              size="lg"
-              className="group"
-              onClick={() =>
-                document
-                  .getElementById("services")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
+          {/* CTA Links */}
+          <div className="flex flex-col sm:flex-row gap-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            <a
+              href="#services"
+              className="inline-flex items-center gap-3 text-lg font-medium text-foreground hover:text-primary transition-colors group"
             >
               Explore Our Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Link to="/approach">
-              <Button variant="outline" size="lg">
-                Our Approach
-              </Button>
+            </a>
+            <Link
+              to="/approach"
+              className="inline-flex items-center gap-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors group"
+            >
+              Our Approach
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
       </div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-float"></div>
-      <div
-        className="absolute bottom-1/4 right-10 w-32 h-32 bg-primary-glow/10 rounded-full blur-xl animate-float"
-        style={{
-          animationDelay: "2s",
-        }}
-      ></div>
     </section>
   );
 };
