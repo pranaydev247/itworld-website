@@ -1,8 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Approach from "@/components/Approach";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const ApproachPage = () => {
   return (
@@ -10,20 +10,60 @@ const ApproachPage = () => {
       <Header />
       
       {/* Hero */}
-      <section className="py-20 bg-gradient-subtle">
-        <div className="container px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-              Our Approach
+      <section className="pt-32 pb-20">
+        <div className="container px-6">
+          <div className="max-w-4xl">
+            <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm">Our Approach</p>
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-[1.1]">
+              Forward Deployed<br />Engineering
             </h1>
-            <p className="text-xl text-muted-foreground">
-              Forward Deployed Engineering: Where strategy meets execution
+            <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
+              We don't advise from afar. Our engineers embed directly with your team, 
+              writing production code in your environment to bridge the "last mile" where 95% of AI pilots fail.
             </p>
           </div>
         </div>
       </section>
 
-      <Approach />
+      {/* FDE vs Traditional */}
+      <section className="py-24 border-t border-border">
+        <div className="container px-6">
+          <div className="max-w-4xl mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              The FDE Difference
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Traditional consultants deliver decks. We deliver deployed systems.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="p-8 rounded-2xl bg-muted/30 border border-border">
+              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-4">Traditional Consultancy</p>
+              <ul className="space-y-4">
+                {["Strategy decks & architecture diagrams", "Transactional, waterfall engagements", "Risk transfer via documentation", "Measured on 'time & budget'"].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="p-8 rounded-2xl bg-primary/5 border border-primary/20">
+              <p className="text-sm text-primary uppercase tracking-wide mb-4">Forward Deployed Engineering</p>
+              <ul className="space-y-4">
+                {["Production-ready code & deployed agents", "Embedded, iterative co-development", "Risk mitigation via engineering ownership", "Measured on operational KPI impact"].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Engagement Model */}
       <section className="py-24 bg-background">
