@@ -1,9 +1,5 @@
-import { ArrowRight, Brain, Code2, Target, Rocket, Shield, Zap } from "lucide-react";
+import { ArrowRight, Brain, Code2, Target, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
-
-import brandInfrajet from "@/assets/brand-infrajet.png";
-import brandPrepstreak from "@/assets/brand-prepstreak.png";
-import brandSareestage from "@/assets/brand-sareestage.png";
 
 const Services = () => {
   const services = [
@@ -20,9 +16,9 @@ const Services = () => {
         "Human-in-the-loop systems",
       ],
       caseStudies: [
-        { image: brandInfrajet, title: "Automating infrastructure compliance audits", client: "InfraJet" },
-        { image: brandPrepstreak, title: "AI-powered document processing pipeline", client: "PrepStreak" },
-        { image: brandSareestage, title: "Intelligent customer service automation", client: "SareeStage" },
+        { title: "Invoice Reconciliation Agent", description: "85% reduction in manual processing time" },
+        { title: "Contract Analysis Assistant", description: "Automated clause extraction & risk flagging" },
+        { title: "Customer Support Copilot", description: "60% faster ticket resolution" },
       ],
     },
     {
@@ -38,9 +34,9 @@ const Services = () => {
         "Agile co-development loops",
       ],
       caseStudies: [
-        { image: brandPrepstreak, title: "Building real-time analytics platform", client: "PrepStreak" },
-        { image: brandInfrajet, title: "Legacy system modernization", client: "InfraJet" },
-        { image: brandSareestage, title: "E-commerce platform scaling", client: "SareeStage" },
+        { title: "Real-Time Analytics Engine", description: "Sub-second query performance at scale" },
+        { title: "Legacy Migration Pipeline", description: "Zero-downtime modernization" },
+        { title: "API Integration Layer", description: "Unified data access across 12 systems" },
       ],
     },
     {
@@ -56,9 +52,9 @@ const Services = () => {
         "Technology stack assessment",
       ],
       caseStudies: [
-        { image: brandSareestage, title: "Digital transformation roadmap", client: "SareeStage" },
-        { image: brandInfrajet, title: "AI readiness assessment", client: "InfraJet" },
-        { image: brandPrepstreak, title: "Data strategy development", client: "PrepStreak" },
+        { title: "AI Opportunity Mapping", description: "Identified $2.4M in automation potential" },
+        { title: "Data Architecture Review", description: "Foundation for enterprise RAG deployment" },
+        { title: "Use Case Prioritization", description: "90-day roadmap with clear ROI metrics" },
       ],
     },
     {
@@ -74,9 +70,9 @@ const Services = () => {
         "Cost optimisation",
       ],
       caseStudies: [
-        { image: brandInfrajet, title: "Cloud-native ML infrastructure", client: "InfraJet" },
-        { image: brandPrepstreak, title: "Automated model retraining pipeline", client: "PrepStreak" },
-        { image: brandSareestage, title: "Real-time inference at scale", client: "SareeStage" },
+        { title: "Inference Pipeline Optimization", description: "40% reduction in cloud costs" },
+        { title: "Model Governance Framework", description: "Audit-ready ML lifecycle management" },
+        { title: "Auto-Scaling Agent Fleet", description: "10x throughput with dynamic scaling" },
       ],
     },
   ];
@@ -154,22 +150,17 @@ const Services = () => {
                     </Link>
                   </div>
 
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="space-y-4">
                     {service.caseStudies.map((study, idx) => (
                       <div
                         key={idx}
-                        className="group cursor-pointer"
+                        className="group p-4 bg-secondary/50 rounded-lg hover:bg-secondary transition-colors cursor-pointer"
                       >
-                        <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden mb-3 relative">
-                          <img
-                            src={study.image}
-                            alt={study.client}
-                            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
-                          />
-                        </div>
-                        <p className="text-xs text-muted-foreground mb-1">{study.client}</p>
-                        <p className="text-sm font-medium text-foreground leading-tight group-hover:text-primary transition-colors">
+                        <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
                           {study.title}
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          {study.description}
                         </p>
                       </div>
                     ))}
