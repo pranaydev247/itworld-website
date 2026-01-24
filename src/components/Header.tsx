@@ -44,7 +44,7 @@ const Header = () => {
             <img
               src={nexgenLogo}
               alt="NexGen Tech Labs"
-              className="h-10 w-auto hover:opacity-80 transition-opacity"
+              className="h-14 w-auto hover:opacity-80 transition-opacity"
             />
           </Link>
 
