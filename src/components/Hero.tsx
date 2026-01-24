@@ -9,9 +9,9 @@ const Hero = () => {
         </p>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-foreground leading-[1.1] mb-8 animate-slide-up">AI & Cloud Solutions
-
-build.deploy.scale<br />
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.1] mb-8 animate-slide-up text-primary">AI & Cloud Solutions 
+build.deploy.scale
+          <br />
             <span className="text-primary"></span>
           </h1>
 
