@@ -6,13 +6,13 @@ const Hero = () => {
         <div className="max-w-5xl">
           {/* Eyebrow */}
           <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-8 animate-fade-in">
-            Forward Deployed Engineering
-          </p>
+        </p>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-foreground leading-[1.1] mb-8 animate-slide-up">Deploy AI , Cloud & Data Engineering
-          <br />
-            <span className="text-primary">Consultancy</span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-foreground leading-[1.1] mb-8 animate-slide-up">AI & Cloud Solutions
+
+build.deploy.scale<br />
+            <span className="text-primary"></span>
           </h1>
 
           {/* Subheadline */}
